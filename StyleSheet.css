@@ -1,0 +1,233 @@
+﻿/* ------------ GOOGLE FONTS ------------ */
+@import url('https://fonts.googleapis.com/css2?family=BioRhyme:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Jost:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+/* ------------ ICONOS ------------ */
+@font-face {
+    font-family: "FontAwesome";
+    src: url("https://fontawesome.com/v5.15/icons/envelope?style=solid");
+}
+
+/* ------------ RESET  ------------ */
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+/* ------------ Estilos del HEADER ------------ */
+
+header {
+    height: 60px;
+    background-color: #116a5a;
+    background-image: linear-gradient(132deg, #1C6F61 99%, #F4D03F 100%);
+    padding: 0 50px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.logo {
+    width: 100px;
+}
+
+.menu a {
+    color: white;
+    font-size: 18px;
+    padding: 0 10px;
+    transition: 0.4s;
+    font-family: 'Josefin Sans', sans-serif;
+    text-decoration: none;
+}
+
+.unhide-menu,
+.hide-menu {
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    transition: 0.4s;
+}
+
+.unhide-menu {
+    order: 1;
+}
+
+    .menu a:hover,
+    .unhide-menu:hover,
+    .hide-menu:hover {
+        color: #FAACA8;
+    }
+
+#check {
+    display: none;
+}
+
+/* ------------ Estilos del BANNER ------------ */
+
+#banner-principal {
+    padding: 0 50px;
+    background-image: url(images/banner-principal.jpg);
+    height: 95vh;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+#banner-servicio {
+    padding: 0 50px;
+    background-image: url(images/banner-servicios.png);
+    height: 95vh;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Josefin Sans', sans-serif;
+}
+#banner-turnos {
+    padding: 0 50px;
+    background-image: url(images/banner-turnos.png);
+    height: 95vh;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+    #banner::before {
+        content: '';
+        background: rgb(54, 54, 54, 0.3);
+        position: absolute;
+        width: 100%;
+        height: 95vh;
+        left: 0;
+    }
+
+.contenido-banner {
+    position: relative;
+    color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+    .contenido-banner h3 {
+        font-size: 50px;
+        font-weight: 400;
+        padding: 10px 0px;
+    }
+
+        .contenido-banner h3 span {
+            font-weight: 600;
+        }
+
+.botton-contact {
+    color: white;
+    border: 1px solid white;
+    padding: 11px 28px;
+    align-self: baseline;
+    transition: all 0.4s;
+    text-decoration: none;
+}
+
+    .botton-contact:hover {
+        background: rgb(54, 54, 54, 0.7);
+
+
+    }
+
+/* ------------ Estilos del FOOTER ----------- */
+
+footer {
+    background-color: #116a5a;
+    background-image: linear-gradient(132deg, #1C6F61 99%, #F4D03F 100%);
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.copy {
+    font-size: 10px;
+    padding: 5px;
+}
+
+footer .contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1px;
+}
+
+.logotipo {
+    width: 100%;
+    text-align: center;
+    padding: 0px;
+    font-size: 1px;
+}
+
+footer .contenedor p {
+    font-size: 13px;
+}
+
+.sociales {
+    width: 100%;
+    position: center;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+    .sociales a {
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+    }
+
+
+
+    .contenedor a {
+        color: black;
+    }
+
+
+/* ------------ Estilos de RESPONSIVE ------------ */
+
+@media (max-width:768px) {
+
+    /* ------------ HEADER  ------------ */
+    .unhide-menu,
+    .hide-menu {
+        display: block;
+    }
+
+    .menu {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: #11836d;
+        background-image: linear-gradient(132deg, #11836d 100%, #ffffff 100%);
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding: 100px, 0px;
+        z-index: 100;
+        transition: 0.8s;
+    }
+
+        .menu a {
+            display: block;
+            padding: 20px;
+        }
+
+    .hide-menu {
+        position: absolute;
+        top: 10px;
+        right: 26px;
+    }
+
+    #check:checked ~ .menu {
+        right: 0;
+    }
